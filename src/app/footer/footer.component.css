@@ -1,0 +1,16 @@
+.footer{
+  background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 20px;
+  align-items: center;
+}
+.footer a{
+  color: var(--white);
+}
+.footer__icons{
+  display: flex;
+  gap: 20px;
+}
