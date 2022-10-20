@@ -7,6 +7,8 @@ import { HeroComponent } from './hero/hero.component';
 import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
 import { PriceComponent } from './price/price.component';
+import { CardComponent } from './card/card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { PriceComponent } from './price/price.component';
     WorkComponent,
     AboutComponent,
     PriceComponent,
+    CardComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule

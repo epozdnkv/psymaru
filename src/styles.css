@@ -74,3 +74,7 @@ section{
   font-family: "Zona Pro Light";
   text-transform: uppercase;
 }
+.container{
+  width: 981px;
+  margin: 0 auto;
+}

@@ -1,22 +1,26 @@
 nav a{
-  color: var(--white);
+  color: white;
   font-size: var(--textSize);
 }
+nav a:hover, nav a:active, nav a:focus{
+color:var(--white);
+}
 .menu{
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-right: 140px;
+
   background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+
+}
+.menuFlex{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 .menu__list{
   display: flex;
-  justify-content: space-around;
-  width: 1088px;
 }
-.menu__item{
-
+.menu__item:not(:last-child){
+  padding-right: 70px;
 }
 nav{
   position:fixed;
