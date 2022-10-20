@@ -64,10 +64,12 @@ a{
   padding: 15px 35px;
   transition: .5s;
 }
+section{
+  padding-top:85px;
+}
 .topHeader{
   color:var(--darkBrown);
   font-size: var(--fHeaderFontSize);
-  padding-top: 100px;
   padding-bottom: 60px;
   font-family: "Zona Pro Light";
   text-transform: uppercase;

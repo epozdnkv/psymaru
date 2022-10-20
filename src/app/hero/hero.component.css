@@ -1,0 +1,22 @@
+.hero{
+  display: flex;
+  align-items: center;
+  color: var(--darkBrown);
+}
+.hero__description{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 220px;
+}
+.hero__header{
+  font-size: var(--fHeaderFontSize);
+  font-family: "Zona Pro Thin";
+  margin-bottom: 50px;
+}
+.hero__text{
+  font-size: var(--menuFontSize);
+  font-family: "Zona Pro Thin";
+  margin-bottom: 65px;
+}
+

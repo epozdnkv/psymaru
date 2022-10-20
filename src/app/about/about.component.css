@@ -1,0 +1,31 @@
+.about__head{
+  color: var(--white);
+}
+.about{
+  background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+  color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.about__list{
+  display: flex;
+  flex-direction: column;
+}
+.about__text{
+  font-family: "Zona Pro Thin";
+  font-size: var(--textSize);
+}
+.about__img{
+  height: 750px;
+}
+
+.about__header{
+  font-size: var(--sHeaderFontSize);
+  padding-bottom: 25px;
+  font-family: "Zona Pro Thin";
+}
+.about__item:not(:last-child){
+  padding-bottom: 50px;
+}
+

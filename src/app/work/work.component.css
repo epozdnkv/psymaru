@@ -1,0 +1,23 @@
+.work{
+  padding-bottom: 80px;
+  background-color: var(--white);
+}
+.work__header{
+  text-transform: lowercase;
+  font-size: var(--sHeaderFontSize);
+  color: var(--darkBrown);
+  font-family: "Zona Pro Light";
+  padding-bottom: 25px;
+}
+.work__desc{
+  font-size: var(--textSize);
+  color: var(--darkBrown);
+  font-family: "Zona Pro Thin";
+}
+.work__list{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+}
+
+

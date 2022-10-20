@@ -1,0 +1,51 @@
+.price{
+  color:var(--darkBrown);
+  display: flex;
+  justify-content: space-between;
+}
+.price__item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price__line{
+  height: 1px;
+  width: 60px;
+  background-color: var(--lightBrown);
+}
+.price__num{
+  font-size: 35px;
+  font-family: "Zona Pro Light";
+}
+.price__form form{
+  border: 1px solid var(--darkBrown);
+  padding: 50px 55px;
+}
+.price__form{
+  display: flex;
+  flex-direction: column;
+}
+.price__name::placeholder
+,.price__phone::placeholder
+,.price__quest::placeholder{
+ font-size: 14px;
+  font-family: "Zona Pro Light";
+  color: var(--lightBrown);
+}
+.price__form input:not(:last-child){
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 30px;
+  border: 1px solid var(--darkBrown);
+}
+.price__form_header{
+  font-size: 35px;
+  font-family: "Zona Pro Light";
+  padding-bottom: 25px;
+}
+.price__form_desc{
+  font-size: var(--textSize);
+  font-family: "Zona Pro Light";
+  padding-bottom: 15px;
+}

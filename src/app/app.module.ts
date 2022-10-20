@@ -6,6 +6,7 @@ import { MyMenuComponent } from './my-menu/my-menu.component';
 import { HeroComponent } from './hero/hero.component';
 import { WorkComponent } from './work/work.component';
 import { AboutComponent } from './about/about.component';
+import { PriceComponent } from './price/price.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AboutComponent } from './about/about.component';
     HeroComponent,
     WorkComponent,
     AboutComponent,
+    PriceComponent,
   ],
   imports: [
     BrowserModule
