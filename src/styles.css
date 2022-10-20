@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Zona Pro';
+  src: local('Zona Pro Regular'), local('ZonaPro-Regular'),
+  url('assets/fonts/ZonaPro-Regular.woff2') format('woff2'),
+  url('assets/fonts/ZonaPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Zona Pro';
+  src: local('Zona Pro Light'), local('ZonaPro-Light'),
+  url('assets/fonts/ZonaPro-Light.woff2') format('woff2'),
+  url('assets/fonts/ZonaPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zona Pro';
+  src: local('Zona Pro Thin'), local('ZonaPro-Thin'),
+  url('assets/fonts/ZonaPro-Thin.woff2') format('woff2'),
+  url('assets/fonts/ZonaPro-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+:root{
+  --lightBrown: #CBA58A;
+  --darkBrown: #886151;
+  --white: #eee;
+  --fHeaderFontSize: 60px;
+  --sHeaderFontSize: 35px;
+  --textSize: 16px;
+  --menuFontSize: 18px;
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Zona Pro';
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+}
+
+.btnLight{
+  border: 1px solid var(--darkBrown);
+  font-size: var(--textSize);
+  font-family: "Zona Pro Light";
+  color: var(--darkBrown);
+  padding: 15px 35px;
+  transition: .5s;
+  cursor: pointer;
+}
+.btnLight:hover{
+  border: 1px solid var(--darkBrown);
+  color: var(--white);
+  background-color: var(--darkBrown);
+  padding: 15px 35px;
+  transition: .5s;
+}
+.topHeader{
+  color:var(--darkBrown);
+  font-size: var(--fHeaderFontSize);
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-family: "Zona Pro Light";
+  text-transform: uppercase;
+}
