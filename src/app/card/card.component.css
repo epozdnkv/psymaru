@@ -1,0 +1,11 @@
+.card__item{
+  width: 350px;
+  border-radius: 25px;
+}
+.cardFlex{
+  display: flex;
+  padding-bottom: 100px;
+}
+.card__description{
+  margin-left: 100px;
+}

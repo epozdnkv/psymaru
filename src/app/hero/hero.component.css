@@ -1,13 +1,16 @@
 .hero{
+
+  color: var(--darkBrown);
+}
+.heroFlex{
   display: flex;
   align-items: center;
-  color: var(--darkBrown);
+  justify-content: space-between;
 }
 .hero__description{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 220px;
 }
 .hero__header{
   font-size: var(--fHeaderFontSize);
@@ -18,5 +21,8 @@
   font-size: var(--menuFontSize);
   font-family: "Zona Pro Thin";
   margin-bottom: 65px;
+}
+.hero__img{
+  height: 500px;
 }
 

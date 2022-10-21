@@ -65,7 +65,7 @@ a{
   transition: .5s;
 }
 section{
-  padding-top:85px;
+  padding-top: 70px;
 }
 .topHeader{
   color:var(--darkBrown);

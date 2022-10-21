@@ -9,10 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { PriceComponent } from './price/price.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
+import {NgxMaskModule} from 'ngx-mask';
 
 @NgModule({
   declarations: [
-    AppComponent,
+        AppComponent,
     MyMenuComponent,
     HeroComponent,
     WorkComponent,
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
