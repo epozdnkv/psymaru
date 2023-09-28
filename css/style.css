@@ -48,6 +48,22 @@ html, body{
 a{
     text-decoration: none;
 }
+.btnDark{
+    border: 1px solid var(--white);
+    font-size: var(--textSize);
+    font-family: "Zona Pro Light";
+    color: var(--white);
+    padding: 10px 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+.btnDark:hover{
+    border: 1px solid var(--darkBrown);
+    color: var(--white);
+    background-color: var(--darkBrown);
+    padding: 10px 20px;
+    transition: .5s;
+}
 .btnLight{
     border: 1px solid var(--darkBrown);
     font-size: var(--textSize);
@@ -96,8 +112,9 @@ nav a:hover, nav a:active, nav a:focus{
 .menuFlex{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .menu__list{
     display: flex;
@@ -300,3 +317,131 @@ nav{
     gap: 20px;
 }
 /*КОНЕЦ ПОДВАЛ*/
+
+/*MEDIA*/
+@media(max-width: 3500px){
+/*меню, копирование с сайта*/
+.top-nav {
+    display: none;
+  }
+  
+  .mmenu {
+    display: flex;
+  }
+  
+  .mmenu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: var(--blue);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: var(--white);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+}
+
+
+@media(max-width: 1050px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media(min-width:320px) and (max-width: 1045px){
+    .container{
+        width: 90%;
+    }
+/*копирование с сайта*/
+    .menu-button-container {
+        display: flex;
+      }
+      .mmenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 80px;
+        width: 100%;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .mmenu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .mmenu li {
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: 0px 10px 15px -5px rgba(34, 60, 80, 0.05);
+      }
+      .mmenu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        background-color: var(--white);
+      }
+      .top-nav{
+          margin: 0;
+          display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 80px;
+        padding: 1em;
+        width: 100% ;
+        box-shadow: 0px 10px 15px -5px rgba(34, 60, 80, 0.05);
+      }     
+}

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Психолог в Пятигорске</title>
-
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id = "app">
     <nav class="menu">
         <div class="container menuFlex">
             <ul class="menu__list">
@@ -15,7 +15,21 @@
                 <li class="menu__item"><a href="#price">Стоимость</a></li>
                 <li class="menu__item"><a href="#contacts">Контакты</a></li>
             </ul>
-            <a href="" class="menu__phone">+7 961 447 56 36</a>
+            <a href="#card" class="btnDark">Карта дня</a>
+        </div>
+
+        <div class="top-nav container">
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+          </label>
+            <ul class="mmenu">
+                <li class="menu__item"><a href="#about">Обо мне</a></li>
+                <li class="menu__item"><a href="#work">С чем я работаю</a></li>
+                <li class="menu__item"><a href="#price">Стоимость</a></li>
+                <li class="menu__item"><a href="#contacts">Контакты</a></li>
+                <li class="menu__item"><a href="#card">Карта дня</a></li>
+            </ul>
         </div>
     </nav>
     <section class="hero">
@@ -134,14 +148,15 @@
         </div>
     </section>
     <section class="card" id="card">
-        <div class="container cardFlex" id="app">
-            <div class="card__img" v-on:click="numRnd=getRandomInt(1,7)">
+        <div class="container cardFlex">
+            <div class="card__img" v-on:click="numRnd=getRandomInt(1,19)">
                 <img
                         v-bind:src= "card[numRnd].path" alt="" class="card__item">
             </div>
             <div class="card__description">
                 <h2 class="card__header topHeader">Карта дня</h2>
-                <p class="card__desc">{{ card[numRnd].description }}</p>
+                <p class="work__header">{{ card[numRnd].name }}</p>
+                <p class="card__desc work__desc">{{ card[numRnd].description }}</p>
             </div>
         </div>
     </section>
@@ -160,6 +175,6 @@
         <a href="" class="footer__mail">psymaru@yandex.ru</a>
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
