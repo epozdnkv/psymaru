@@ -1,0 +1,302 @@
+/*ПОДКЛЮЧЕНИЕ ШРИФТОВ*/
+@font-face {
+    font-family: 'Zona Pro';
+    src: local('Zona Pro Regular'), local('ZonaPro-Regular'),
+    url('../src/fonts/ZonaPro-Regular.woff2') format('woff2'),
+    url('../src/fonts/ZonaPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zona Pro';
+    src: local('Zona Pro Light'), local('ZonaPro-Light'),
+    url('../src/fonts/ZonaPro-Light.woff2') format('woff2'),
+    url('../src/fonts/ZonaPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zona Pro';
+    src: local('Zona Pro Thin'), local('ZonaPro-Thin'),
+    url('../src/fonts/ZonaPro-Thin.woff2') format('woff2'),
+    url('../src/fonts/ZonaPro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+/*ЗАДАНИЕ НАСТРОЕК ДЛЯ ОСНОВНЫХ СТИЛЕЙ*/
+:root{
+    --lightBrown: #CBA58A;
+    --darkBrown: #886151;
+    --white: #eee;
+    --fHeaderFontSize: 60px;
+    --sHeaderFontSize: 35px;
+    --textSize: 16px;
+    --menuFontSize: 18px;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Zona Pro';
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.btnLight{
+    border: 1px solid var(--darkBrown);
+    font-size: var(--textSize);
+    font-family: "Zona Pro Light";
+    color: var(--darkBrown);
+    padding: 15px 35px;
+    transition: .5s;
+    cursor: pointer;
+}
+.btnLight:hover{
+    border: 1px solid var(--darkBrown);
+    color: var(--white);
+    background-color: var(--darkBrown);
+    padding: 15px 35px;
+    transition: .5s;
+}
+section{
+    padding-top: 70px;
+}
+.topHeader{
+    color:var(--darkBrown);
+    font-size: var(--fHeaderFontSize);
+    padding-bottom: 60px;
+    font-family: "Zona Pro Light";
+    text-transform: uppercase;
+}
+.container{
+    width: 981px;
+    margin: 0 auto;
+}
+/*КОНЕЦ ЗАДАНИЯ НАСТРОЕК ДЛЯ ОСНОВНЫХ СТИЛЕЙ*/
+
+/*СТИЛИ МЕНЮ*/
+nav a{
+    color: white;
+    font-size: var(--textSize);
+}
+nav a:hover, nav a:active, nav a:focus{
+    color:var(--white);
+}
+.menu{
+
+    background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+
+}
+.menuFlex{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.menu__list{
+    display: flex;
+}
+.menu__item:not(:last-child){
+    padding-right: 70px;
+}
+nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 10px 15px -5px rgba(34, 60, 80, 0.05);
+}
+/*КОНЕЦ СТИЛЕЙ МЕНЮ*/
+/*ГЛАВНЫЙ ЭКРАН*/
+.hero{
+
+    color: var(--darkBrown);
+}
+.heroFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero__header{
+    font-size: var(--fHeaderFontSize);
+    font-family: "Zona Pro Thin";
+    margin-bottom: 50px;
+}
+.hero__text{
+    font-size: var(--menuFontSize);
+    font-family: "Zona Pro Thin";
+    margin-bottom: 65px;
+}
+.hero__img{
+    height: 500px;
+}
+/*КОНЕЦ ГЛАВНОГО ЭКРАНА*/
+/*С ЧЕМ РАБОТАЮ*/
+.work{
+    padding-bottom: 80px;
+    background-color: var(--white);
+}
+.work__header{
+    text-transform: lowercase;
+    font-size: var(--sHeaderFontSize);
+    color: var(--darkBrown);
+    font-family: "Zona Pro Light";
+    padding-bottom: 25px;
+}
+.work__desc{
+    font-size: var(--textSize);
+    color: var(--darkBrown);
+    font-family: "Zona Pro Thin";
+}
+.work__list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+}
+/*КОНЕЦ С ЧЕМ РАБОТАЮ*/
+/*ОБО МНЕ*/
+.about__head{
+    color: var(--white);
+}
+.about{
+    background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+    color: var(--white);
+}
+.aboutFlex{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.about__list{
+    display: flex;
+    flex-direction: column;
+}
+.about__text{
+    font-family: "Zona Pro Thin";
+    font-size: var(--textSize);
+}
+.about__img{
+    height: 550px;
+}
+
+.about__header{
+    font-size: var(--sHeaderFontSize);
+    padding-bottom: 25px;
+    font-family: "Zona Pro Thin";
+}
+.about__item:not(:last-child){
+    padding-bottom: 50px;
+}
+/*КОНЕЦ ОБО МНЕ*/
+/*СТОИМОСТЬ*/
+.price{
+    color:var(--darkBrown);
+}
+.priceFlex{
+    display: flex;
+    justify-content: space-between;
+}
+.price__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.price__line{
+    height: 1px;
+    width: 60px;
+    background-color: var(--lightBrown);
+}
+.price__num{
+    font-size: 35px;
+    font-family: "Zona Pro Light";
+}
+.price__form form{
+    border: 1px solid var(--darkBrown);
+    padding: 50px 55px;
+}
+.price__form{
+    display: flex;
+    flex-direction: column;
+}
+.price__name::placeholder
+,.price__phone::placeholder
+,.price__quest::placeholder{
+    font-size: 14px;
+    font-family: "Zona Pro Light";
+    color: var(--lightBrown);
+}
+.price__form input:not(:last-child), textarea{
+    margin-bottom: 20px;
+    /*padding-bottom: 15px;*/
+    /*padding-top: 15px;*/
+    /*padding-left: 30px;*/
+    padding: 15px 10px 15px 30px;
+    border: 1px solid var(--darkBrown);
+}
+.price__form_header{
+    font-size: 35px;
+    font-family: "Zona Pro Light";
+    padding-bottom: 25px;
+}
+.price__form_desc{
+    font-size: var(--textSize);
+    font-family: "Zona Pro Light";
+    padding-bottom: 15px;
+}
+.maps{
+    padding-top: 60px;
+}
+/*КОНЕЦ СТОИМОСТЬ*/
+/*КАРТА ДНЯ*/
+.card__item{
+    width: 350px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.cardFlex{
+    display: flex;
+    padding-bottom: 100px;
+}
+.card__description{
+    margin-left: 100px;
+}
+/*КОНЕЦ КАРТА ДНЯ*/
+/*КОНТАКТЫ*/
+.contactsFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*КОНЕЦ КОНТАКТОВ*/
+/*ПОДВАЛ*/
+.footer{
+    background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 20px;
+    align-items: center;
+}
+.footer a{
+    color: var(--white);
+}
+.footer__icons{
+    display: flex;
+    gap: 20px;
+}
+/*КОНЕЦ ПОДВАЛ*/
