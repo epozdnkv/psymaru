@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body id = "app">
+<body class = "noselect" id = "app">
     <nav class="menu">
         <div class="container menuFlex">
             <ul class="menu__list">
@@ -17,20 +17,6 @@
             </ul>
             <a href="#card" class="btnDark">Карта дня</a>
         </div>
-
-        <div class="top-nav container">
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-          </label>
-            <ul class="mmenu">
-                <li class="menu__item"><a href="#about">Обо мне</a></li>
-                <li class="menu__item"><a href="#work">С чем я работаю</a></li>
-                <li class="menu__item"><a href="#price">Стоимость</a></li>
-                <li class="menu__item"><a href="#contacts">Контакты</a></li>
-                <li class="menu__item"><a href="#card">Карта дня</a></li>
-            </ul>
-        </div>
     </nav>
     <section class="hero">
         <div class="container heroFlex">
@@ -38,7 +24,7 @@
             <div class="hero__description">
                 <h2 class="hero__header">Мария<br>Компанцева</h2>
                 <h1 class="hero__text">Психолог гештальт-терапевт<br>Со мной вам будет свободно и безопасно</h1>
-                <a href="" class="hero__btn btnLight">Записаться на косультацию</a>
+                <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight">Записаться на косультацию</a>
             </div>
         </div>
     </section>
@@ -120,36 +106,55 @@
             </div>
         </div>
     </section>
-    <section class="contacts container" id="contacts">
-        <h2 class="contacts__header topHeader">
-            Контакты
-        </h2>
-        <div class="contactsFlex">
-            <ul class="contacts__list">
-                <li class="contacts__item">
-                    <p class="price__text">+7 961 447 56 36</p>
-                    <span class="price__line"></span>
-                    <p class="price__num">2000</p>
-                </li>
-                <li class="contacts__item">
-                    <p class="price__text">psymaru@yandex.ru</p>
-                    <span class="price__line"></span>
-                    <p class="price__num">2800</p>
-                </li>
-                <li class="contacts__item">
-                    <p class="price__text">Пятигорск, проспект Кирова 78, офис 203</p>
-                    <span class="price__line"></span>
-                    <p class="price__num">1800</p>
-                </li>
-            </ul>
-            <div class="maps">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0cac4d849df5c4c825b478a52aa4ffcc95b74deef86d537bbda5214601d46da3&amp;source=constructor" width="515" height="300" frameborder="0"></iframe>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="contacts__header topHeader">
+                Контакты
+            </h2>
+            <div class="contactsFlex">
+                <div class="maps">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0cac4d849df5c4c825b478a52aa4ffcc95b74deef86d537bbda5214601d46da3&amp;source=constructor" width="515" height="300" frameborder="0"></iframe>
+                </div>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <p class="contacts__head">Телефон</p>
+                        <p class="contacts__desc">+7 961 447 56 36</p>
+                    </li>
+                    <li class="contacts__item">
+                        <p class="contacts__head">Электронная почта</p>
+                        <p class="contacts__desc">psymaru@yandex.ru</p>
+                    </li>
+                    <li class="contacts__item">
+                        <p class="contacts__head">Адрес</p>
+                        <p class="contacts__desc">Пятигорск, проспект Кирова 78, офис 203</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
     <section class="card" id="card">
-        <div class="container cardFlex">
+        <div class="container cardFlex" v-if="numRnd == 0">
             <div class="card__img" v-on:click="numRnd=getRandomInt(1,19)">
+                <img
+                        v-bind:src= "card[0].path" alt="" class="card__item">
+            </div>
+            <div class="card__description">
+                <h2 class="card__header topHeader">Карта дня</h2>
+                <p class="work__header">{{ card[numRnd].name }}</p>
+                <div class="card__desc work__desc">
+                    На время представьте, что ваше сознание — это большой и таинственный лес
+                    <br><br>1. Какую пользу вам может принести выбранное существо?
+                    <br>2. Назовите причину, по которой данному существу не место в вашем лесу. Кто они?  В чем его опасность? Что в нем отталкивающего?
+                    <br>3. Чем оно отличаются от жителей вашего леса?
+                    <br>4. Как оградить свой лес от его присутствия?
+                    <br>5. При каких условиях нежеланный гость, смогут стать обитателями?
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container cardFlex" v-if="numRnd != 0">
+            <div class="card__img">
                 <img
                         v-bind:src= "card[numRnd].path" alt="" class="card__item">
             </div>
@@ -162,17 +167,23 @@
     </section>
     <footer class="footer">
         <ul class="footer__icons">
-            <li class="footer__item"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="50.689" height="29" viewBox="0 0 50.689 29">
+            <li class="footer__item"><a href="https://vk.com/psychologist_mariya" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 50.689 29">
                 <path id="Контур_1" data-name="Контур 1" d="M42.217,148.38h3.029a2.548,2.548,0,0,0,1.381-.606,2.213,2.213,0,0,0,.415-1.335s-.06-4.076,1.829-4.676c1.86-.591,4.248,3.94,6.78,5.684a4.789,4.789,0,0,0,3.368,1.029l6.771-.1s3.542-.219,1.863-3.011c-.136-.228-.979-2.065-5.034-5.839-4.246-3.952-3.676-3.311,1.438-10.144,3.115-4.161,4.36-6.7,3.97-7.79-.371-1.036-2.661-.762-2.661-.762l-7.617.045a1.733,1.733,0,0,0-.985.175,2.145,2.145,0,0,0-.672.82,44.325,44.325,0,0,1-2.816,5.96c-3.393,5.778-4.752,6.083-5.307,5.724C46.677,132.722,47,130.2,47,128.4c0-5.6.846-7.936-1.651-8.539a13.026,13.026,0,0,0-3.558-.356c-2.719-.029-5.022.009-6.324.648-.868.426-1.537,1.376-1.128,1.43a3.413,3.413,0,0,1,2.25,1.134c.783,1.064.754,3.46.754,3.46s.45,6.591-1.049,7.412c-1.03.562-2.439-.585-5.465-5.83a48.929,48.929,0,0,1-2.721-5.655,2.257,2.257,0,0,0-.627-.848,3.148,3.148,0,0,0-1.173-.473l-7.242.044s-1.087.032-1.486.505c-.355.423-.028,1.293-.028,1.293s5.671,13.3,12.091,20.007c5.89,6.147,12.575,5.744,12.575,5.744Zm0,0" transform="translate(-17.415 -119.503)" fill="#fff"/>
             </svg>
             </a></li>
-            <li class="footer__item"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="35.091" height="29" viewBox="0 0 35.091 29">
+            <li class="footer__item"><a href="https://t.me/divanchik_psy" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 35.091 29">
                 <path id="Контур_5" data-name="Контур 5" d="M35.481,11.717C30.852,13.635,11,21.857,5.518,24.1c-3.678,1.435-1.525,2.781-1.525,2.781s3.14,1.076,5.831,1.884,4.127-.09,4.127-.09L26.6,20.151c4.486-3.05,3.409-.538,2.332.538-2.332,2.333-6.19,6.011-9.42,8.971-1.435,1.256-.718,2.332-.09,2.871,2.332,1.974,8.7,6.011,9.061,6.28,1.9,1.342,5.623,3.273,6.19-.807l2.243-14.085c.718-4.755,1.435-9.151,1.525-10.407C38.711,10.462,35.481,11.717,35.481,11.717Z" transform="translate(-3.366 -11.461)" fill="#fff"/>
             </svg>
             </a></li>
+            <li class="footer__item"><a href="https://wa.me/79614475636" target="_blank">
+                <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="35px" height="35px">    <path d="M 15 3 C 8.373 3 3 8.373 3 15 C 3 17.251208 3.6323415 19.350068 4.7109375 21.150391 L 3.1074219 27 L 9.0820312 25.431641 C 10.829354 26.425062 12.84649 27 15 27 C 21.627 27 27 21.627 27 15 C 27 8.373 21.627 3 15 3 z M 10.892578 9.4023438 C 11.087578 9.4023438 11.287937 9.4011562 11.460938 9.4101562 C 11.674938 9.4151563 11.907859 9.4308281 12.130859 9.9238281 C 12.395859 10.509828 12.972875 11.979906 13.046875 12.128906 C 13.120875 12.277906 13.173313 12.453437 13.070312 12.648438 C 12.972312 12.848437 12.921344 12.969484 12.777344 13.146484 C 12.628344 13.318484 12.465078 13.532109 12.330078 13.662109 C 12.181078 13.811109 12.027219 13.974484 12.199219 14.271484 C 12.371219 14.568484 12.968563 15.542125 13.851562 16.328125 C 14.986562 17.342125 15.944188 17.653734 16.242188 17.802734 C 16.540187 17.951734 16.712766 17.928516 16.884766 17.728516 C 17.061766 17.533516 17.628125 16.864406 17.828125 16.566406 C 18.023125 16.268406 18.222188 16.319969 18.492188 16.417969 C 18.766188 16.515969 20.227391 17.235766 20.525391 17.384766 C 20.823391 17.533766 21.01875 17.607516 21.09375 17.728516 C 21.17075 17.853516 21.170828 18.448578 20.923828 19.142578 C 20.676828 19.835578 19.463922 20.505734 18.919922 20.552734 C 18.370922 20.603734 17.858562 20.7995 15.351562 19.8125 C 12.327563 18.6215 10.420484 15.524219 10.271484 15.324219 C 10.122484 15.129219 9.0605469 13.713906 9.0605469 12.253906 C 9.0605469 10.788906 9.8286563 10.071437 10.097656 9.7734375 C 10.371656 9.4754375 10.692578 9.4023438 10.892578 9.4023438 z"/></svg>
+            </a></li>
         </ul>
-        <a href="" class="footer__phone">+7 961 447 56 36</a>
-        <a href="" class="footer__mail">psymaru@yandex.ru</a>
+        <div>
+            <a href="tel:+79614475636" class="footer__phone">+7 961 447 56 36</a> <span class = "about__head"> | </span>
+            <a href="mailto:psymaru@yandex.ru" class="footer__mail">psymaru@yandex.ru</a>
+        </div>
+
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
