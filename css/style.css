@@ -168,11 +168,6 @@ nav{
     color: rgba(255, 255, 255, 1);
 }
 
-
-
-
-
-
 /*ГЛАВНЫЙ ЭКРАН*/
 .hero{
 
@@ -200,7 +195,7 @@ nav{
     font-size: var(--menuFontSize);
     font-weight: 300;
     margin-bottom: 65px;
-}
+    font-family: 'Montserrat', sans-serif;}
 .hero__img{
     height: 500px;
 }
@@ -495,6 +490,15 @@ tr>td{
     .work__list{
         display: flex;
         flex-direction: column;
+        row-gap: 0;
+    }
+    .work__header{
+        margin-bottom: 10px;
+        padding-bottom: 0;
+    }
+    .work__desc{
+        margin-bottom: 25px;
+        padding-bottom: 0;
     }
     .about__head{
         color: var(--white);
