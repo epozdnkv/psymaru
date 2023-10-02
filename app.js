@@ -155,7 +155,7 @@ const App = {
                 min = Math.ceil(min);
                 max = Math.floor(max);
                 this.numRnd = Math.floor(Math.random() * (max - min + 1)) + min;
-                expirationDate.setDate(expirationDate.getDate() + 1);
+                expirationDate.setDate(expirationDate.getDate(expirationDate.setUTCHours(23,59,59,999)));
                 document.cookie = "dayCard=" + this.numRnd + "; expires=" + expirationDate.toUTCString() + "; path=/";
                 return this.numRnd
             }else return this.numRnd

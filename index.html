@@ -30,10 +30,15 @@
         </div>
 
         <div class="container heroMobile">
-            <h2 class="hero__header">Мария<br>Компанцева</h2>
-            <h1 class="hero__text">Психолог гештальт-терапевт<br>Со мной вам будет свободно и безопасно</h1>
-            <img src="src/img/hero.png" alt="" class="hero__img">
-            <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight">Записаться на косультацию</a>
+            <div class="hero1">
+                <h2 class="hero__header">Мария<br>Компанцева</h2>
+                <h1 class="hero__text">Психолог гештальт-терапевт<br>Со мной вам будет свободно и безопасно</h1>
+            </div>
+            <div class="hero2">
+                <img src="src/img/hero.png" alt="" class="hero__img">
+                <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight">Записаться на косультацию</a>
+            </div>
+
         </div>
     </section>
     <section class="work" id = "work">
@@ -95,7 +100,7 @@
                     Стоимость
                 </h2>
                 <div class="price__info">
-                    <div>
+                    <div class="price1">
                         <table class="price__table">
                             <tr class="price__tbr">
                                 <td class="price__text">консультация</td>
@@ -139,7 +144,9 @@
     </section>
     <section class="card" id="card">
         <div class="container cardFlex">
+            <h2 class="card__mheader topHeader">Карта дня</h2>
             <div class="card__img" v-on:click="numRnd=getRandomInt(1,19)">
+
                 <img
                         v-bind:src= "card[numRnd].path" alt="" class="card__item">
             </div>
