@@ -39,6 +39,8 @@
     --white: #eee;
     --fHeaderFontSize: 60px;
     --sHeaderFontSize: 35px;
+    --mfHeaderFontSize: 35px;
+    --msHeaderFontSize: 18px;
     --textSize: 16px;
     --menuFontSize: 18px;
     scroll-behavior: smooth;
@@ -85,7 +87,6 @@ a{
     border: 1px solid var(--darkBrown);
     color: var(--white);
     background-color: var(--darkBrown);
-    padding: 15px 35px;
     transition: .5s;
 }
 section{
@@ -143,6 +144,9 @@ nav{
 .hero{
 
     color: var(--darkBrown);
+}
+.heroMobile{
+    display: none;
 }
 .heroFlex{
     display: flex;
@@ -230,9 +234,22 @@ nav{
 .price{
     color:var(--darkBrown);
 }
+.price__table{
+    margin-bottom: 30px;
+}
+tr>td{
+    padding-bottom: 50px;
+}
+.price__info{
+    display: flex;
+}
+.price__desc{
+    margin-left: 30px;
+}
 .priceFlex{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 .price__item{
     display: flex;
@@ -243,7 +260,11 @@ nav{
 .price__line{
     height: 1px;
     width: 60px;
+    margin: auto 50px;
     background-color: var(--lightBrown);
+}
+.price__tbr{
+    padding-bottom: 50px;
 }
 .price__num{
     font-size: 35px;
@@ -285,6 +306,9 @@ nav{
 
 /*КОНЕЦ СТОИМОСТЬ*/
 /*КАРТА ДНЯ*/
+.card{
+    background-color: var(--white);
+}
 .card__item{
     width: 350px;
     border-radius: 25px;
@@ -303,7 +327,6 @@ nav{
 /*КОНЕЦ КАРТА ДНЯ*/
 /*КОНТАКТЫ*/
 .contacts{
-    background-color: var(--white);
     padding-bottom: 80px;
 }
 .contactsFlex{
@@ -342,3 +365,123 @@ nav{
     gap: 20px;
 }
 /*КОНЕЦ ПОДВАЛ*/
+
+@media (max-width: 1020px){
+    section{
+        padding-top: 45px;
+    }
+    .topHeader{
+        color:var(--darkBrown);
+        font-size: var(--mfHeaderFontSize);
+        padding-bottom: 30px;
+        font-family: "Zona Pro Light";
+        text-transform: uppercase;
+    }
+    .container{
+        width: 720px;
+    }
+    .btnLight{
+        padding: 10px 20px;
+    }
+    /*nav*/
+    .menu__item:not(:last-child){
+        padding-right: 30px;
+    }
+    /*HERO*/
+    .heroFlex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero__description{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero__header{
+        font-size: var(--mfHeaderFontSize);
+        font-family: "Zona Pro Thin";
+        margin-bottom: 20px;
+    }
+    .hero__text{
+        font-size: var(--msHeaderFontSize);
+        font-family: "Zona Pro Thin";
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .hero__img{
+        height: 380px;
+        margin-right: 20px;
+    }
+    /*work*/
+    .work__header{
+        text-transform: lowercase;
+        font-size: 22px;
+        color: var(--darkBrown);
+        font-family: "Zona Pro Light";
+        padding-bottom: 25px;
+    }
+    /*about*/
+    .about__head{
+        color: var(--white);
+    }
+    .about__img{
+        margin-right: 20px;
+    }
+    /*contacts*/
+    iframe{
+        width:400px;
+        margin-right: 20px;
+    }
+    .contacts__head{
+        font-size: 22px;
+    }
+    /*card*/
+    .card__item{
+        width: 250px;
+    }
+}
+@media (max-width: 780px){
+    section{
+        padding-top: 45px;
+    }
+    .topHeader{
+        color:var(--darkBrown);
+        font-size: var(--mfHeaderFontSize);
+        padding-bottom: 30px;
+        font-family: "Zona Pro Light";
+        text-transform: uppercase;
+    }
+
+    .container{
+        width: 440px;
+    }
+    .btnLight{
+        padding: 10px 20px;
+    }
+    /*HERO*/
+    .heroFlex{
+        display: none;
+    }
+    .heroMobile{
+        margin-top: 50px;
+        display: block;
+    }
+    .hero__header{
+        font-size: var(--mfHeaderFontSize);
+        font-family: "Zona Pro Thin";
+        margin-bottom: 20px;
+    }
+    .hero__text{
+        font-size: var(--msHeaderFontSize);
+        font-family: "Zona Pro Thin";
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .hero__img{
+        margin-bottom: 40px;
+    }
+    .hero__btn{
+        margin-bottom: 70px;
+    }
+}

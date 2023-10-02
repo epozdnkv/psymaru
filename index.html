@@ -5,6 +5,7 @@
     <title>Психолог в Пятигорске</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="src/favicon.svg" type="image/svg+xml">
 </head>
 <body class = "noselect" id = "app">
     <nav class="menu">
@@ -26,6 +27,13 @@
                 <h1 class="hero__text">Психолог гештальт-терапевт<br>Со мной вам будет свободно и безопасно</h1>
                 <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight">Записаться на косультацию</a>
             </div>
+        </div>
+
+        <div class="container heroMobile">
+            <h2 class="hero__header">Мария<br>Компанцева</h2>
+            <h1 class="hero__text">Психолог гештальт-терапевт<br>Со мной вам будет свободно и безопасно</h1>
+            <img src="src/img/hero.png" alt="" class="hero__img">
+            <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight">Записаться на косультацию</a>
         </div>
     </section>
     <section class="work" id = "work">
@@ -86,23 +94,59 @@
                 <h2 class="price__header topHeader">
                     Стоимость
                 </h2>
-                <ul class="price__list">
-                    <li class="price__item">
-                        <p class="price__text">консультация</p>
-                        <span class="price__line"></span>
-                        <p class="price__num">2000</p>
-                    </li>
-                    <li class="price__item">
-                        <p class="price__text">онлайн консультация</p>
-                        <span class="price__line"></span>
-                        <p class="price__num">2800</p>
-                    </li>
-                    <li class="price__item">
-                        <p class="price__text">консультация<br>в рамках терапии</p>
-                        <span class="price__line"></span>
-                        <p class="price__num">1800</p>
-                    </li>
-                </ul>
+                <div class="price__info">
+                    <div>
+                        <table class="price__table">
+                            <tr class="price__tbr">
+                                <td class="price__text">консультация</td>
+                                <td><hr class="price__line"></td>
+                                <td class="price__num">₽3000</td>
+                            </tr>
+                            <tr class="price__tbr">
+                                <td class="price__text">онлайн консультация</td>
+                                <td><hr class="price__line"></td>
+                                <td class="price__num">₽3000</td>
+                            </tr>
+                            <tr class="price__tbr">
+                                <td class="price__text">пакет из 6 консультаций</td>
+                                <td><hr class="price__line"></td>
+                                <td class="price__num"><s>₽18000</s><br>₽15000</td>
+                            </tr>
+                        </table>
+                        <a href="https://wa.me/79614475636" target="_blank" class="hero__btn btnLight priceBtn">Записаться на косультацию</a>
+                    </div>
+
+                    <div class="price__desc">
+                        <p class="work__header">Помогу в решении следующих проблем</p>
+                        <ul class="price__info__list">
+                            <li>— депрессия, суицидальные мысли</li>
+                            <li>— страхи, фобии, тревожные расстройства</li>
+                            <li>— зависимости: алкогольная, табачная, булимия, анорексия, компульсивное переедание</li>
+                            <li>— семейные, детско-родительские отношения</li>
+                            <li>— ОКР, панические атаки, навязчивости</li>
+                            <li>— прокрастинация, ненужность, никчемность (низкая самооценка)</li>
+                            <li>— одиночество</li>
+                            <li>— раздражительность (вспышки гнева)</li>
+                            <li>— проблемы в сексе</li>
+                            <li>— отстаивание личных границ, сепарация</li>
+                            <li>— помощь жертвам психологического, физического, сексуального насилия</li>
+                            <li>— потеря смысла, безысходность</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card" id="card">
+        <div class="container cardFlex">
+            <div class="card__img" v-on:click="numRnd=getRandomInt(1,19)">
+                <img
+                        v-bind:src= "card[numRnd].path" alt="" class="card__item">
+            </div>
+            <div class="card__description">
+                <h2 class="card__header topHeader">Карта дня</h2>
+                <p class="work__header">{{ card[numRnd].name }}</p>
+                <p class="card__desc work__desc" v-html="card[numRnd].description"></p>
             </div>
         </div>
     </section>
@@ -132,39 +176,7 @@
             </div>
         </div>
     </section>
-    <section class="card" id="card">
-        <div class="container cardFlex" v-if="numRnd == 0">
-            <div class="card__img" v-on:click="numRnd=getRandomInt(1,19)">
-                <img
-                        v-bind:src= "card[0].path" alt="" class="card__item">
-            </div>
-            <div class="card__description">
-                <h2 class="card__header topHeader">Карта дня</h2>
-                <p class="work__header">{{ card[numRnd].name }}</p>
-                <div class="card__desc work__desc">
-                    На время представьте, что ваше сознание — это большой и таинственный лес
-                    <br><br>1. Какую пользу вам может принести выбранное существо?
-                    <br>2. Назовите причину, по которой данному существу не место в вашем лесу. Кто они?  В чем его опасность? Что в нем отталкивающего?
-                    <br>3. Чем оно отличаются от жителей вашего леса?
-                    <br>4. Как оградить свой лес от его присутствия?
-                    <br>5. При каких условиях нежеланный гость, смогут стать обитателями?
-                </div>
-            </div>
-        </div>
 
-
-        <div class="container cardFlex" v-if="numRnd != 0">
-            <div class="card__img">
-                <img
-                        v-bind:src= "card[numRnd].path" alt="" class="card__item">
-            </div>
-            <div class="card__description">
-                <h2 class="card__header topHeader">Карта дня</h2>
-                <p class="work__header">{{ card[numRnd].name }}</p>
-                <p class="card__desc work__desc">{{ card[numRnd].description }}</p>
-            </div>
-        </div>
-    </section>
     <footer class="footer">
         <ul class="footer__icons">
             <li class="footer__item"><a href="https://vk.com/psychologist_mariya" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 50.689 29">
@@ -183,7 +195,6 @@
             <a href="tel:+79614475636" class="footer__phone">+7 961 447 56 36</a> <span class = "about__head"> | </span>
             <a href="mailto:psymaru@yandex.ru" class="footer__mail">psymaru@yandex.ru</a>
         </div>
-
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
