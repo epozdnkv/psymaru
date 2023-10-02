@@ -1,4 +1,5 @@
 /*ПОДКЛЮЧЕНИЕ ШРИФТОВ*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Oswald:wght@700&family=Ubuntu+Condensed&display=swap');
 @font-face {
     font-family: 'Zona Pro';
     src: local('Zona Pro Regular'), local('ZonaPro-Regular'),
@@ -52,7 +53,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: 'Zona Pro';
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 html, body{
@@ -63,8 +64,7 @@ a{
 }
 .btnDark{
     border: 1px solid var(--white);
-    font-size: var(--textSize);
-    font-family: "Zona Pro Light";
+    font: var(--textSize) 100;
     color: var(--white);
     padding: 10px 20px;
     transition: .5s;
@@ -79,8 +79,7 @@ a{
 }
 .btnLight{
     border: 1px solid var(--darkBrown);
-    font-size: var(--textSize);
-    font-family: "Zona Pro Light";
+    font: var(--textSize) 100;
     color: var(--darkBrown);
     padding: 15px 35px;
     transition: .5s;
@@ -98,8 +97,8 @@ section{
 .topHeader{
     color:var(--darkBrown);
     font-size: var(--fHeaderFontSize);
+    font-weight: 400;
     padding-bottom: 60px;
-    font-family: "Zona Pro Light", "Roboto Light";
     text-transform: uppercase;
 }
 .container{
@@ -194,12 +193,12 @@ nav{
 }
 .hero__header{
     font-size: var(--fHeaderFontSize);
-    font-family: "Zona Pro Thin", "Roboto Thin";
+    font-weight: 400;
     margin-bottom: 50px;
 }
 .hero__text{
     font-size: var(--menuFontSize);
-    font-family: "Zona Pro Thin", "Roboto Thin";
+    font-weight: 300;
     margin-bottom: 65px;
 }
 .hero__img{
@@ -215,13 +214,13 @@ nav{
     text-transform: lowercase;
     font-size: var(--sHeaderFontSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Light", "Roboto Light";
+    font-weight: 400;
     padding-bottom: 25px;
 }
 .work__desc{
     font-size: var(--textSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Thin", "Roboto Thin";
+    font-weight: 300;
 }
 .work__list{
     display: grid;
@@ -248,7 +247,7 @@ nav{
     flex-direction: column;
 }
 .about__text{
-    font-family: "Zona Pro Thin", "Roboto Thin";
+    font-weight: 300;
     font-size: var(--textSize);
 }
 .about__img{
@@ -258,7 +257,7 @@ nav{
 .about__header{
     font-size: var(--sHeaderFontSize);
     padding-bottom: 25px;
-    font-family: "Zona Pro Thin", "Roboto Thin";
+    font-weight: 400;
 }
 .about__item:not(:last-child){
     padding-bottom: 50px;
@@ -302,40 +301,7 @@ tr>td{
 }
 .price__num{
     font-size: 35px;
-    font-family: "Zona Pro Light", "Roboto Thin";
-}
-.price__form form{
-    border: 1px solid var(--darkBrown);
-    padding: 50px 55px;
-}
-.price__form{
-    display: flex;
-    flex-direction: column;
-}
-.price__name::placeholder
-,.price__phone::placeholder
-,.price__quest::placeholder{
-    font-size: 14px;
-    font-family: "Zona Pro Light", "Roboto Light";
-    color: var(--lightBrown);
-}
-.price__form input:not(:last-child), textarea{
-    margin-bottom: 20px;
-    /*padding-bottom: 15px;*/
-    /*padding-top: 15px;*/
-    /*padding-left: 30px;*/
-    padding: 15px 10px 15px 30px;
-    border: 1px solid var(--darkBrown);
-}
-.price__form_header{
-    font-size: 35px;
-    font-family: "Zona Pro Light", "Roboto Light";
-    padding-bottom: 25px;
-}
-.price__form_desc{
-    font-size: var(--textSize);
-    font-family: "Zona Pro Light", "Roboto Light";
-    padding-bottom: 15px;
+    font-weight: 400;
 }
 
 /*КОНЕЦ СТОИМОСТЬ*/
@@ -375,12 +341,12 @@ tr>td{
     text-transform: lowercase;
     font-size: var(--sHeaderFontSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Light", "Roboto Light";
+    font-weight: 400;
 }
 .contacts__desc{
     font-size: var(--textSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Thin" "Roboto Thin";
+    font-weight: 300;
     padding-bottom: 25px;
 }
 /*КОНЕЦ КОНТАКТОВ*/
@@ -411,7 +377,7 @@ tr>td{
         color:var(--darkBrown);
         font-size: var(--mfHeaderFontSize);
         padding-bottom: 30px;
-        font-family: "Zona Pro Light", "Roboto Light";
+        font-weight: 400;
         text-transform: uppercase;
     }
     .container{
@@ -437,7 +403,6 @@ tr>td{
     }
     .hero__header{
         font-size: var(--mfHeaderFontSize);
-        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-bottom: 20px;
     }
     .hero__text{
@@ -455,7 +420,6 @@ tr>td{
         text-transform: lowercase;
         font-size: 22px;
         color: var(--darkBrown);
-        font-family: "Zona Pro Light", "Roboto Light";
         padding-bottom: 25px;
     }
     /*about*/
@@ -487,7 +451,6 @@ tr>td{
         color:var(--darkBrown);
         font-size: var(--mfHeaderFontSize);
         padding-bottom: 30px;
-        font-family: "Zona Pro Light", "Roboto Light";
         text-transform: uppercase;
     }
 
@@ -513,12 +476,10 @@ tr>td{
     }
     .hero__header{
         font-size: var(--mfHeaderFontSize);
-        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-bottom: 20px;
     }
     .hero__text{
         font-size: var(--msHeaderFontSize);
-        font-family: "Zona Pro Thin", "Roboto Thin"o;
         margin-top: 0;
         margin-bottom: 40px;
     }
