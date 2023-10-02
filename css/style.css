@@ -3,7 +3,8 @@
     font-family: 'Zona Pro';
     src: local('Zona Pro Regular'), local('ZonaPro-Regular'),
     url('../src/fonts/ZonaPro-Regular.woff2') format('woff2'),
-    url('../src/fonts/ZonaPro-Regular.woff') format('woff');
+    url('../src/fonts/ZonaPro-Regular.woff') format('woff'),
+    url('../src/fonts/ZonaPro-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +12,8 @@
     font-family: 'Zona Pro';
     src: local('Zona Pro Light'), local('ZonaPro-Light'),
     url('../src/fonts/ZonaPro-Light.woff2') format('woff2'),
-    url('../src/fonts/ZonaPro-Light.woff') format('woff');
+    url('../src/fonts/ZonaPro-Light.woff') format('woff'),
+    url('../src/fonts/ZonaPro-Light.ttf') format('ttf');
     font-weight: 300;
     font-style: normal;
 }
@@ -20,7 +22,8 @@
     font-family: 'Zona Pro';
     src: local('Zona Pro Thin'), local('ZonaPro-Thin'),
     url('../src/fonts/ZonaPro-Thin.woff2') format('woff2'),
-    url('../src/fonts/ZonaPro-Thin.woff') format('woff');
+    url('../src/fonts/ZonaPro-Thin.woff') format('woff'),
+    url('../src/fonts/ZonaPro-Thin.ttf') format('ttf');
     font-weight: 100;
     font-style: normal;
 }
