@@ -407,7 +407,6 @@ tr>td{
     }
     .hero__text{
         font-size: var(--msHeaderFontSize);
-        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-top: 0;
         margin-bottom: 40px;
     }
