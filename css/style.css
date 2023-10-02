@@ -113,10 +113,8 @@ nav a{
 nav a:hover, nav a:active, nav a:focus{
     color:var(--white);
 }
-.menu{
-
+.navbar{
     background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);
-
 }
 .menuFlex{
     display: flex;
@@ -139,7 +137,40 @@ nav{
     z-index: 10;
     box-shadow: 0px 10px 15px -5px rgba(34, 60, 80, 0.05);
 }
+
+.myMenu{
+    display: none;
+}
 /*КОНЕЦ СТИЛЕЙ МЕНЮ*/
+
+/*меню с сайта*/
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(75deg, var(--lightBrown) 0%, var(--darkBrown) 100%);;
+}
+
+
+
+.hamb {
+    display: none;
+}
+
+.popup {
+    display: none;
+}
+
+.navbar__wrap .menu > li > a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
 /*ГЛАВНЫЙ ЭКРАН*/
 .hero{
 
@@ -491,6 +522,8 @@ tr>td{
     .hero__img{
         margin-bottom: 40px;
         margin-right: 0px;
+        width: 100%;
+        height: auto;
     }
     .hero__btn{
         margin-bottom: 70px;
@@ -537,7 +570,7 @@ tr>td{
         align-items: center;
     }
     .card__item{
-        width: 340px;
+        width: 100%;
         height: auto;
         margin-bottom: 50px;
     }
@@ -558,9 +591,102 @@ tr>td{
     }
     .price__line{
         width: 20px;
+        margin: 0 20px;
+    }
+    .price__table{
+        width: 320px;
     }
     iframe{
-        width: 370px;
+        width: 100%;
         margin-right: 0;
     }
+
+
+    /*сайт*/
+    .navbar__wrap .menu {
+        display: none;
+    }
+
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamb__field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #fff;
+        transition: 0.2s;
+    }
+
+    .popup {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .popup.open {
+        left: 0;
+    }
+
+    .popup .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+        overflow: auto;
+    }
+
+    .popup .menu > li {
+        width: 100%;
+    }
+
+    .popup .menu > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--darkBrown);
+    }
+
+    .popup .menu > li > a:hover {
+        background-color: rgba(122, 82, 179, 0.1);
+    }
+
+    .hamb__field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    body.noscroll {
+        overflow: hidden;
+    }
+        .menu__item:not(:last-child) {
+            padding-right: 0px;
+        }
 }

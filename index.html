@@ -10,7 +10,29 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 </head>
 <body class = "noselect" id = "app">
-    <nav class="menu">
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrap menuFlex">
+                <div class="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span> <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <ul class="menu menu__list" id="menu">
+                    <li class="menu__item"><a href="#about">Обо мне</a></li>
+                    <li class="menu__item"><a href="#work">С чем я работаю</a></li>
+                    <li class="menu__item"><a href="#price">Стоимость</a></li>
+                    <li class="menu__item"><a href="#contacts">Контакты</a></li>
+                </ul>
+                <a href="#card" class="btnDark">Карта дня</a>
+            </div>
+        </div>
+    </nav>
+    <div class="popup" id="popup"></div>
+
+    <nav class="menu myMenu">
         <div class="container menuFlex">
             <ul class="menu__list">
                 <li class="menu__item"><a href="#about">Обо мне</a></li>
@@ -207,5 +229,6 @@
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
