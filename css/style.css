@@ -96,7 +96,7 @@ section{
     color:var(--darkBrown);
     font-size: var(--fHeaderFontSize);
     padding-bottom: 60px;
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
     text-transform: uppercase;
 }
 .container{
@@ -191,12 +191,12 @@ nav{
 }
 .hero__header{
     font-size: var(--fHeaderFontSize);
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin", "Roboto Thin";
     margin-bottom: 50px;
 }
 .hero__text{
     font-size: var(--menuFontSize);
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin", "Roboto Thin";
     margin-bottom: 65px;
 }
 .hero__img{
@@ -212,13 +212,13 @@ nav{
     text-transform: lowercase;
     font-size: var(--sHeaderFontSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
     padding-bottom: 25px;
 }
 .work__desc{
     font-size: var(--textSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin", "Roboto Thin";
 }
 .work__list{
     display: grid;
@@ -245,7 +245,7 @@ nav{
     flex-direction: column;
 }
 .about__text{
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin", "Roboto Thin";
     font-size: var(--textSize);
 }
 .about__img{
@@ -255,7 +255,7 @@ nav{
 .about__header{
     font-size: var(--sHeaderFontSize);
     padding-bottom: 25px;
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin", "Roboto Thin";
 }
 .about__item:not(:last-child){
     padding-bottom: 50px;
@@ -299,7 +299,7 @@ tr>td{
 }
 .price__num{
     font-size: 35px;
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Thin";
 }
 .price__form form{
     border: 1px solid var(--darkBrown);
@@ -313,7 +313,7 @@ tr>td{
 ,.price__phone::placeholder
 ,.price__quest::placeholder{
     font-size: 14px;
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
     color: var(--lightBrown);
 }
 .price__form input:not(:last-child), textarea{
@@ -326,12 +326,12 @@ tr>td{
 }
 .price__form_header{
     font-size: 35px;
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
     padding-bottom: 25px;
 }
 .price__form_desc{
     font-size: var(--textSize);
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
     padding-bottom: 15px;
 }
 
@@ -372,12 +372,12 @@ tr>td{
     text-transform: lowercase;
     font-size: var(--sHeaderFontSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Light";
+    font-family: "Zona Pro Light", "Roboto Light";
 }
 .contacts__desc{
     font-size: var(--textSize);
     color: var(--darkBrown);
-    font-family: "Zona Pro Thin";
+    font-family: "Zona Pro Thin" "Roboto Thin";
     padding-bottom: 25px;
 }
 /*КОНЕЦ КОНТАКТОВ*/
@@ -408,7 +408,7 @@ tr>td{
         color:var(--darkBrown);
         font-size: var(--mfHeaderFontSize);
         padding-bottom: 30px;
-        font-family: "Zona Pro Light";
+        font-family: "Zona Pro Light", "Roboto Light";
         text-transform: uppercase;
     }
     .container{
@@ -434,12 +434,12 @@ tr>td{
     }
     .hero__header{
         font-size: var(--mfHeaderFontSize);
-        font-family: "Zona Pro Thin";
+        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-bottom: 20px;
     }
     .hero__text{
         font-size: var(--msHeaderFontSize);
-        font-family: "Zona Pro Thin";
+        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-top: 0;
         margin-bottom: 40px;
     }
@@ -452,7 +452,7 @@ tr>td{
         text-transform: lowercase;
         font-size: 22px;
         color: var(--darkBrown);
-        font-family: "Zona Pro Light";
+        font-family: "Zona Pro Light", "Roboto Light";
         padding-bottom: 25px;
     }
     /*about*/
@@ -484,7 +484,7 @@ tr>td{
         color:var(--darkBrown);
         font-size: var(--mfHeaderFontSize);
         padding-bottom: 30px;
-        font-family: "Zona Pro Light";
+        font-family: "Zona Pro Light", "Roboto Light";
         text-transform: uppercase;
     }
 
@@ -510,12 +510,12 @@ tr>td{
     }
     .hero__header{
         font-size: var(--mfHeaderFontSize);
-        font-family: "Zona Pro Thin";
+        font-family: "Zona Pro Thin", "Roboto Thin";
         margin-bottom: 20px;
     }
     .hero__text{
         font-size: var(--msHeaderFontSize);
-        font-family: "Zona Pro Thin";
+        font-family: "Zona Pro Thin", "Roboto Thin"o;
         margin-top: 0;
         margin-bottom: 40px;
     }
@@ -686,7 +686,10 @@ tr>td{
     body.noscroll {
         overflow: hidden;
     }
-        .menu__item:not(:last-child) {
+    .menu__item:not(:last-child) {
             padding-right: 0px;
-        }
+    }
+    .footer__icons{
+        gap: 30px;
+    }
 }
